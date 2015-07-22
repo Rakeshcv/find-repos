@@ -1,0 +1,91 @@
+.repo.ng-enter.ng-enter-active,
+.repo.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+.repo.ng-leave.ng-leave-active,
+.repo.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.repolist,.repoerror {
+  background: #EEE8D5;
+  width: 50%;
+  min-width: 290px;
+  max-width:350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  opacity: .95;
+  z-index: 10;
+}
+
+.repolist{
+  border-radius: 0 0 20px 20px;
+}
+
+.repoerror{
+  margin: 120px auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5px;
+}
+
+
+
+.repolist ul {
+  margin: 0;
+  padding: 0;
+  background: #FDF6E3;
+}
+
+.repolist li {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px dotted black;
+  opacity: .9;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.repolist a {
+  display: block;
+  text-decoration: none;
+}
+
+.repolist li:hover {
+  background: #FDF6E3;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.repo img {
+  display: block;
+  float: left;
+  width: 60px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.repo info{
+  display: block;
+  float: left;
+  padding-left: 120px !important;
+}
+
+.repo:last-child {
+  border-bottom:none;
+}
