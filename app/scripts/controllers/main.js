@@ -12,13 +12,12 @@ angular.module('githubDirectoryApp')
 
     $scope.repoOrder = 'name';
     $scope.fetchData = function(){
-      $('#spinner').show();
       //check for empty string as HTML5 "required" doesn't work in safari
       if($scope.query === '' || $scope.query === undefined){
         window.alert('Field can\'t be blank');
-        $('#spinner').hide();
         return;
       }
+      $('#spinner').show();
 
       //call githubservice
       githubservice.getUser($scope.query).then(onSuccess,onError);
