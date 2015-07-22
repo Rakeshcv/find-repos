@@ -9,6 +9,8 @@
 angular.module('githubDirectoryApp')
   .directive('appInfo', function () {
     return {
-
+      restrict: 'AE',
+      controller: 'MainCtrl',
+      templateUrl: 'views/main.html'
     };
   });
