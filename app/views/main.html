@@ -23,4 +23,37 @@
       desc
     </label>
   </div>
+
+  <div ng-show="error == false">
+
+    <ul class="repolist" ng-show="error == false && data">
+      <li ng-animate="'animate'" class="repo clearfix"
+          ng-repeat="repo in data  | orderBy: repoOrder:direction track by $index">
+        <a href="{{repo.html_url}}" target="_blank">
+          <div>
+            <h2>{{repo.name}}</h2>
+            <h3>{{repo.full_name}}</h3>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="repoerror" ng-show="error == true">
+    <h2>
+      {{data}}
+    </h2>
+  </div>
+
+
+  <div class="cssload-loader" id="loader" style="display: none;">
+
+  </div>
+
+  <div class="repoerror" ng-show="error == false && data.length == 0">
+
+    <h2>
+      {{message}}
+    </h2>
+  </div>
 </section>

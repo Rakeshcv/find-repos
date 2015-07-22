@@ -10,6 +10,7 @@
 angular.module('githubDirectoryApp')
   .controller('MainCtrl', ['$scope','githubservice',function ($scope,githubservice) {
 
+    $scope.repoOrder = "name";
     $scope.fetchData = function(){
       //check for empty string as HTML5 "required" doesn't work in safari
       if($scope.query === '' || $scope.query === undefined){
@@ -27,6 +28,7 @@ angular.module('githubDirectoryApp')
     };
 
     var onComplete = function(response){
+      $scope.error = false;
       $scope.data = response;
       if($scope.data.length === 0){
         $scope.message = 'No repository found for '+ $scope.query;
@@ -34,6 +36,7 @@ angular.module('githubDirectoryApp')
     };
 
     var onError = function(){
+      $scope.error = true;
       $scope.data = 'No account found for ' + $scope.query;
     };
 
