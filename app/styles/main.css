@@ -1,5 +1,134 @@
-body{
+body {
   font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  background-color: #f1f1f1;
+  background: -webkit-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #70e1f5 10%, #ffd194 90%); /* W3C */
+
+
 }
+
+.scontainer{
+  background: #063642;
+  color: #EEE8D5;
+  width: 90%;
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  z-index: 20;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfixf:after {
+  clear: both;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #475b62;
+  text-shadow: 1px 1px rgb(255,255,255, 1);
+}
+
+a {
+  color: #145266;
+}
+
+
+.scontainer h1{
+  color: #EEE8D5;
+
+}
+
+.scontainer label {
+  display: none;
+}
+
+.scontainer input {
+  width: 100%;
+  padding: 10px 0 10px 15px;
+  font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.scontainer label.formgroup {
+  display: inline;
+  width: auto;
+}
+
+.scontainer .formgroup input {
+  border: 1px solid rgba(0,0,0,0.3);
+  display: inline;
+  width: auto;
+}
+
+
+h1{
+  color: #145266;
+  font-size: 2.2rem;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+
+h2{
+  font-size: 1.5rem;
+  line-height: 90%;
+  color: #c61c6f;
+}
+
+h3{
+  margin-top: 0;
+  color: #bd3613;
+  line-height: 110%;
+  margin-bottom: 5px;
+}
+
+p {
+  line-height: 1.3rem;
+  color: #475B62;
+  margin-bottom: 10px;
+}
+
+a.small {
+  line-height: 100%;
+  font-size: .9rem;
+}
+
+
+input::-webkit-input-placeholder {
+  font-weight: lighter !important;
+  color: #000000;
+}
+input::-moz-placeholder {
+  color: #000000;
+  font-weight: lighter !important;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+  color: #000000;
+  font-weight: lighter !important;
+}
+input:-ms-input-placeholder {
+  color: #000000;
+  font-weight: lighter !important;
+}
+
+input{
+  color: #000000;
+  text-transform: capitalize;
+}
+

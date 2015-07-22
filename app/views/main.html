@@ -1,1 +1,26 @@
-<p>This is the main view.</p>
+<section>
+  <div class="scontainer">
+    <h1>Github Directory</h1>
+    <label>search: </label>
+
+    <form ng-submit="getData()">
+      <input ng-model="query" placeholder="getRepo in username &#x23ce;" autofocus ng-change="checkInput()"
+             ng-required="true">
+    </form>
+
+    <label class="formgroup">by:
+      <select ng-model="repoOrder">
+        <option value="name">Name</option>
+      </select>
+    </label>
+
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction">
+      asc
+    </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      desc
+    </label>
+  </div>
+</section>
