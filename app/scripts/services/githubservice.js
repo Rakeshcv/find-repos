@@ -12,13 +12,12 @@ angular.module('githubDirectoryApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
 
     var getUser = function(query){
-      return $http('https://api.github.com/users/' + query).then(function (response) {
-        console.log(response.data);
+      return $http.get('https://api.github.com/users/' + query).then(function (response) {
         return response.data;
       });
     };
 
-    var getRepos = function(){
+    var getRepos = function(query){
       return $http.get(query).then(function (response) {
         return response.data;
       });
